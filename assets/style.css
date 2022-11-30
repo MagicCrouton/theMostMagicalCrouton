@@ -1,0 +1,28 @@
+body { font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+
+}
+
+.Location {
+    font-family: 'Roboto Mono', monospace;
+    background-color: white;
+    color: black;
+}
+
+.Personal {
+    font-family: 'Roboto Mono', monospace;
+
+} 
+
+footer {
+        padding: 20px;
+        margin-top: 10px;
+        color: white;
+        background-color: #333;
+        text-align: center;
+}
