@@ -3,11 +3,14 @@ body { font-family: 'Roboto Mono', monospace;
     background-color: white;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: black;
     line-height: 1.6;
 
 }
 
+.form {
+    color: blue;
+}
 .Location {
     font-family: 'Roboto Mono', monospace;
     background-color: white;
