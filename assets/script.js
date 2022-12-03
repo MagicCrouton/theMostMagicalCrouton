@@ -36,9 +36,9 @@ var storySubmitBtnEl = $('#storySubmit')
 storySubmitBtnEl.on('click', function(event) {
     event.preventDefault()
     for (i=0; i < storyGen.length; ++i) {
-        var tempPayload1 = $(`#payLoadA${i}`).val()
+        var tempPayload1 = $(`#payLoadA${i}`).val();
         console.log(tempPayload1);
-        var tempPayload2 = $(`#payLoadB${i}`).val()
+        var tempPayload2 = $(`#payLoadB${i}`).val();
         console.log(tempPayload2);
         payLoad[i] = `${tempPayload1} ${tempPayload2}`
         }

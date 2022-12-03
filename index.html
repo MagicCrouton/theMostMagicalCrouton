@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<div id="pageOne">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Magical Crouton</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +33,16 @@
         </ul>
       </div>
     </nav>
+      <br>  
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Find Location</h1>
+        <p class="lead">This section is the lacation section. get photos of tourist attractions</p>
+      </div>
+  </div>
+</div>
 
-    <br>
-
+<div id="pageTwo" class="invisible">
     <section class="Location">
         <form>
             <div class="form-group">
@@ -60,13 +68,6 @@
                 <button id = "storySubmit" type="submit" class="btn btn-primary">Submit</button>
               </div>
          </form>   
-       
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Find Location</h1>
-              <p class="lead">This section is the lacation section. get photos of tourist attractions</p>
-            </div>
-          </div>
 
     <div class="input-group flex-nowrap">
         <span class="input-group-text" id="addon-wrapping"> Location </span>
@@ -82,29 +83,13 @@
 
     </section>  
 
-    <br>
-    <section class="Personal">
-
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Personalize</h1>
-              <p class="lead">This section will be for the personal photo uplaod</p>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img src="./Images/take-a-sip.png" class="card-img-top" alt="Alien Drinking coffee">
-            <div class="card-body">
-              <p class="card-text">Cool pictures will be added.</p>
-            </div>
-          </div>
-
-    <div class="input-group">
+    <!-- <div class="input-group">
         <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Render</button>
+        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Render</button> -->
       </div> 
 
     </section>
-
+</div>
     <footer> The Magic Crouton, Copyright &copy; 2022 </footer>
 </body>
 
