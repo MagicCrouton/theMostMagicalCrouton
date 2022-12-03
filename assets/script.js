@@ -1,9 +1,13 @@
-
-setTimeout(function(){
-
+var pageOneEl = $('#pageOne');
+var pageTwoEl = $('#pageTwo');
 var storySubmitBtnEl = $('#storySubmit');
 var payLoad = [];
 
+
+setTimeout(function(){
+
+pageOneEl.attr('class', 'invisible');
+pageTwoEl.removeAttr('class');
 
 var story1 = [
 `story1 you find yourself standing in front of * and wanting to`,
