@@ -1,5 +1,4 @@
 
-
 setTimeout(function(){
 
 var storySubmitBtnEl = $('#storySubmit');
@@ -41,6 +40,7 @@ var stories = [story1, story2, story3, story4];
 var randomGen = Math.floor(Math.random() * 4);
 var storyGen = stories[randomGen];
 
+
 for (i=0; i < storyGen.length; ++i){
     var temp =storyGen[i].split("*");
     var tempEl = $(`#story${i+1}`);
@@ -52,9 +52,10 @@ var storySubmitBtnEl = $('#storySubmit')
 storySubmitBtnEl.on('click', function(event) {
     event.preventDefault()
     for (i=0; i < storyGen.length; ++i) {
-        var tempPayload1 = $(`#payLoadA${i}`).val()
+
+        var tempPayload1 = $(`#payLoadA${i}`).val();
         console.log(tempPayload1);
-        var tempPayload2 = $(`#payLoadB${i}`).val()
+        var tempPayload2 = $(`#payLoadB${i}`).val();
         console.log(tempPayload2);
         payLoad[i] = `${tempPayload1} ${tempPayload2}`
         }
