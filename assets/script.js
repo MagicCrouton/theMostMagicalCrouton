@@ -15,6 +15,7 @@ var payLoad = [];
 // var storyFormEight = $('#storyFormEight').val();
 
 var stories = [];
+
 var story1 = [
 `you find yourself standing in front of * and wanting to`,
 `you ask * and do.`,
