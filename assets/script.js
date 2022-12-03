@@ -2,28 +2,44 @@ var storyOne = $('#storyOne');
 var storyTwo = $('#storyTwo');
 var storyThree = $('#storyThree');
 var storyFour = $('#storyFour');
+var storySubmitBtnEl = $('#storySubmit');
+var payLoad = [];
 
-var storyFormOne = $('#storyFormOne').val();
-var storyFormTwo = $('#storyFormTwo').val();
-var storyFormThree = $('#storyFormThree').val();
-var storyFormFour = $('#storyFormFour').val();
-var storyFormFive = $('#storyFormFive').val();
-var storyFormSix = $('#storyFormSix').val();
-var storyFormSeven = $('#storyFormSeven').val();
-var storyFormEight = $('#storyFormEight').val();
+// var storyFormOne = $('#storyFormOne').val();
+// var storyFormTwo = $('#storyFormTwo').val();
+// var storyFormThree = $('#storyFormThree').val();
+// var storyFormFour = $('#storyFormFour').val();
+// var storyFormFive = $('#storyFormFive').val();
+// var storyFormSix = $('#storyFormSix').val();
+// var storyFormSeven = $('#storyFormSeven').val();
+// var storyFormEight = $('#storyFormEight').val();
 
 var stories = [];
-var story1 = {
-    tile1:`you find yourself standing in front of * and wanting to`,
-    tile2:`you ask * and do.`,
-    tile3:`blurb 1 * asdfasdf 2.`,
-    tile4:`blub 3 * asdfasdf`
-    };
 
-stories[0]= story1;
+var story1 = [
+`you find yourself standing in front of * and wanting to`,
+`you ask * and do.`,
+`blurb 1 * asdfasdf 2.`,
+`blub 3 * asdfasdf`
+];
 
-var temp = stories[0].tile1.split("*");
+var storyGen = story1;
 
-for (i=0; i<temp.length ; ++i){
-    story1.append(`temp[1]<span id=payload1 to dalle></span>`)
-}
+for (i=0; i < storyGen.length; ++i){
+    var temp =storyGen[i].split("*");
+    var tempEl = $(`#story${i+1}`);
+    tempEl.text("");
+    tempEl.html(`<span>${temp[0]}<input type="text" id="payLoadA${i}">${temp[1]}<input type="text" id="payLoadB${i}"</span>`)
+}    
+
+var storySubmitBtnEl = $('#storySubmit')
+storySubmitBtnEl.on('click', function(event) {
+    event.preventDefault()
+    for (i=0; i < storyGen.length; ++i) {
+        var tempPayload1 = $(`#payLoadA${i}`).val()
+        console.log(tempPayload1);
+        var tempPayload2 = $(`#payLoadB${i}`).val()
+        console.log(tempPayload2);
+        payLoad[i] = `${tempPayload1} ${tempPayload2}`
+        }
+    })
