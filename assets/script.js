@@ -1,6 +1,6 @@
 var pageOneEl = $('#pageOne');
 var pageTwoEl = $('#pageTwo');
-var comicLayoutEl = $('#comic-layout')
+var comicLayoutEl = $('#comic-layout');
 var storySubmitBtnEl = $('#storySubmit');
 var quotes = [];
 var payLoad = [];
@@ -40,6 +40,7 @@ function fetchText(payLoad,i) {
         
 // this function calls to openAPI/DallE then returns the image url. payload is the string to feed the AI 
 // comicLayoutEl is the jquery element that the picture will append to and i is the iterator
+//payload is single string
 function fetchDallE(payLoad,comicLayoutEl,i) {
     fetch("https://api.openai.com/v1/images/generations", {
         method: 'POST',
