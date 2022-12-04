@@ -6,7 +6,43 @@ var quotes = [];
 var payLoad = [];
 var APIResponse=[];
 
-// API function
+// API functions
+// this function takes in words and makest them better
+function fetchText(payLoad) {
+    fetch("https://api.openai.com/v1/completions", {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${localStorage.getItem('key')}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "model": "text-davinci-003",
+            "prompt": `make each element in the array a caption for a comic book pane 
+                       separated by commas with the art styles removed ${payLoad}`,
+            "max_tokens": 100,
+            "temperature": .5,
+        })
+    })
+    .then(response => {
+        return response.json()
+    })
+    .then(data=>{
+        APIResponse =  data;
+        var captions = data.choices;
+        console.log(captions);
+        // text= APIResponse.data[0].url;
+        // comicLayoutEl.append(`
+        // <div class="card spot${i}" style="width: 18rem;">
+        // <img class="card-img-top" src="${APIResponse.data[0].url}" alt="Image${i}">
+        // <div class="card-body">
+        //   <p class="card-text">${payLoad}</p>
+        // </div>`)
+    })
+        .catch(error => {
+            console.log(error)
+        });
+    }
+        
 // this function calls to openAPI/DallE then returns the image url. payload is the string to feed the AI 
 // comicLayoutEl is the jquery element that the picture will append to and i is the iterator
 function fetchDallE(payLoad,comicLayoutEl,i) {
