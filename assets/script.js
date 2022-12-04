@@ -5,6 +5,7 @@ var storySubmitBtnEl = $('#storySubmit');
 var quotes = [];
 var payLoad = [];
 var APIResponse=[];
+var captions=[];
 
 // API functions
 // this function takes in words and makest them better
@@ -19,7 +20,7 @@ function fetchText(payLoad) {
             "model": "text-davinci-003",
             "prompt": `make each element in the array a caption for a comic book pane 
                        separated by commas with the art styles removed ${payLoad}`,
-            "max_tokens": 100,
+            "max_tokens": 500,
             "temperature": .5,
         })
     })
@@ -27,16 +28,9 @@ function fetchText(payLoad) {
         return response.json()
     })
     .then(data=>{
-        APIResponse =  data;
-        var captions = data.choices;
-        console.log(captions);
-        // text= APIResponse.data[0].url;
-        // comicLayoutEl.append(`
-        // <div class="card spot${i}" style="width: 18rem;">
-        // <img class="card-img-top" src="${APIResponse.data[0].url}" alt="Image${i}">
-        // <div class="card-body">
-        //   <p class="card-text">${payLoad}</p>
-        // </div>`)
+        APIResponse =data;
+        text= data.text;
+        console.log(text);
     })
         .catch(error => {
             console.log(error)
@@ -63,7 +57,7 @@ function fetchDallE(payLoad,comicLayoutEl,i) {
         return response.json()
     })
     .then(data=>{
-        APIResponse =  data;
+        // APIResponse =  data;
         pictureUrl= APIResponse.data[0].url;
         comicLayoutEl.append(`
         <div class="card spot${i}" style="width: 18rem;">
@@ -116,7 +110,8 @@ setTimeout(function(){
                 }
             currentTemp = currentTemp.join('');
             // console.log(currentTemp);
-            payLoad[i] = `${stories[randomGen].style} ${currentTemp}`;
+            // payLoad[i] = `${stories[randomGen].style} ${currentTemp}`;
+             payLoad[i] = ` ${currentTemp}`;           
             }
 
             // fetchDallE(payLoad[1], comicLayoutEl, i)
