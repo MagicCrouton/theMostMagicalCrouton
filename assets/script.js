@@ -5,9 +5,6 @@ var storySubmitBtnEl = $('#storySubmit');
 var quotes = [];
 var payLoad = [];
 var APIResponse=[];
-var apiKey = `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`
-
-// story data has been moved to separate sheet storyData.js
 
 // API function
 // this function calls to openAPI/DallE then returns the image url. payload is the string to feed the AI 
@@ -16,7 +13,7 @@ function fetchDallE(payLoad,comicLayoutEl,i) {
     fetch("https://api.openai.com/v1/images/generations", {
         method: 'POST',
         headers: {
-            'Authorization': `Bearer ${apiKey}`,
+            'Authorization': `Bearer ${localStorage.getItem('key')}`,
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
