@@ -5,5 +5,7 @@ Wire Frame for our comic book generating site
 ![Alt text](./Images/Project%201%20Wirefram.pdf "figure 1")
 
 
+![Alt text](./Images/MVP.png "figure 1")
+
 ## License
 N/A
