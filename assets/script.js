@@ -1,14 +1,18 @@
 var pageOneEl = $('#pageOne');
 var pageTwoEl = $('#pageTwo');
+var comicLayoutEl = $('#comic-layout')
 var storySubmitBtnEl = $('#storySubmit');
+var quotes = [];
 var payLoad = [];
 var APIResponse=[];
-var apiKey = `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`
+var apiKey = `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`
 
 // story data has been moved to separate sheet storyData.js
 
 // API function
-function fetchDallE(payLoad, i) {
+// this function calls to openAPI/DallE then returns the image url. payload is the string to feed the AI 
+// comicLayoutEl is the jquery element that the picture will append to and i is the iterator
+function fetchDallE(payLoad,comicLayoutEl,i) {
     fetch("https://api.openai.com/v1/images/generations", {
         method: 'POST',
         headers: {
@@ -27,7 +31,13 @@ function fetchDallE(payLoad, i) {
     })
     .then(data=>{
         APIResponse =  data;
-        console.log('done')
+        pictureUrl= APIResponse.data[0].url;
+        comicLayoutEl.append(`
+        <div class="card spot${i}" style="width: 18rem;">
+        <img class="card-img-top" src="${APIResponse.data[0].url}" alt="Image${i}">
+        <div class="card-body">
+          <p class="card-text">${payLoad}</p>
+        </div>`)
     })
         .catch(error => {
             console.log(error)
@@ -59,7 +69,7 @@ setTimeout(function(){
     }    
 
     var storySubmitBtnEl = $('#storySubmit')
-    storySubmitBtnEl.on('click', function(event) {
+    storySubmitBtnEl.on('click', function(event){
         event.preventDefault(event);
         for (i=0; i < storyGen.length; ++i) {
             var tempPayload = [];
@@ -75,8 +85,17 @@ setTimeout(function(){
             // console.log(currentTemp);
             payLoad[i] = `${stories[randomGen].style} ${currentTemp}`;
             }
-        })
-            console.log(payLoad)
+
+            // fetchDallE(payLoad[1], comicLayoutEl, i)
+
+            payLoad.forEach(element => {
+            var i = 1;
+              fetchDallE(element, comicLayoutEl, i);
+            i = i+1;    
+            })
+
+            
+})
 
 
 }, 5000)

@@ -23,12 +23,12 @@ var story1 = {
      style:`a ${style} ${art} of`
 };
 var story2 = {
-    narration: [`The most Magical Crouton brings a * to slay the*`,
+    narration: [`The most Magical Crouton brings a * to slay a*`,
     `he thinks about his * and decides to*`,
     `suddenly a * burst through to door with a*`,
     `the most Magical Crouton * everyone is *`],
      payLoadGuide:[
-    ['a Magical Crouton holding a','*','to slay a', '*'],
+    ['a Magical Crouton holding a','*','to slay the', '*'],
     ['a Magical Crouton thinking about his','*','holding a', 'thinking about','*'],
     ['a','*','breakes through the wall holding a','*','to give to a magical crouton'],
     ['a magical crouton feeling','*','and a crowd of people around looking at the crouton feeling','*']
@@ -51,7 +51,7 @@ var story3 = {
     `suddenly a * burst through to door with a*`,
     `the most Magical Crouton * everyone is *`],
      payLoadGuide:[
-    ['a Magical Crouton holding a','*','to slay a', '*'],
+    ['a Magical Crouton holding a','*','to slay the', '*'],
     ['a Magical Crouton thinking about his','*','holding a', 'thinking about','*'],
     ['a','*','breakes through the wall holding a','*','to give to a magical crouton'],
     ['a magical crouton feeling','*','and a crowd of people around looking at the crouton feeling','*']
