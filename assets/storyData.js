@@ -35,16 +35,16 @@ var story2 = {
     ],
      style:`a ${style} ${art} of`
 }
-// var story2 = {
-//     narration: [`You are driving a*and suddenly you see a critter that looks like a*`,
-//     `you close your*and you hope*`,
-//     `the critter grabs a*and*`,
-//     `the critter*and everyone is*`],
-//      tile1: 'Magical Crouton holding a',
-//      tile2:'Magical Crouton holding a',
-//      tile3:'Magical Crouton holding a',
-//      tile4:'Magical Crouton holding a',
-// };
+var story2 = {
+    narration: [`You are driving a*and suddenly you see a critter that looks like a*`,
+    `you close your*and you hope*`,
+    `the critter grabs a*and*`,
+    `the critter*and everyone is*`],
+     tile1: 'Magical Crouton holding a',
+     tile2:'Magical Crouton holding a',
+     tile3:'Magical Crouton holding a',
+     tile4:'Magical Crouton holding a',
+};
 var story3 = {
     narration: [`The most Magical Crouton has decided to fight a * with a*`,
     `he remembers his * and decides to *`,

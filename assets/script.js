@@ -57,7 +57,7 @@ function fetchDallE(payLoad,comicLayoutEl,i) {
         return response.json()
     })
     .then(data=>{
-        // APIResponse =  data;
+        APIResponse =  data;
         pictureUrl= APIResponse.data[0].url;
         comicLayoutEl.append(`
         <div class="card spot${i}" style="width: 18rem;">
