@@ -122,11 +122,10 @@ setTimeout(function(){
             }
 
             // fetchDallE(payLoad[1], comicLayoutEl, i)
-
+            var i = 1
             payLoad.forEach(element => {
-            var i = 1;
               fetchDallE(element, comicLayoutEl, i);
-            i = i+1;    
+            i = i+1;  
             })
 
             
