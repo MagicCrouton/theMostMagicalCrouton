@@ -33,3 +33,24 @@ footer {
     border: none;
     border-bottom: 1px solid #000000;
 }
+
+.loading {
+    display: flex;
+    justify-content: center;
+}
+
+.loading::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    border: 20px solid lightgrey;
+    border-top-color: red;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(1turn);
+    }
+}
