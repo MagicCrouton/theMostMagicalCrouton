@@ -1,0 +1,23 @@
+{
+  "name": "themostmagicalcrouton",
+  "version": "1.0.0",
+  "description": "Project 1 GTBootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagicCrouton/theMostMagicalCrouton.git"
+  },
+  "author": "Eugene Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MagicCrouton/theMostMagicalCrouton/issues"
+  },
+  "homepage": "https://github.com/MagicCrouton/theMostMagicalCrouton#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "react-scripts": "^2.1.3"
+  }
+}
