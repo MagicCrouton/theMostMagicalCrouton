@@ -36,6 +36,7 @@ var story2 = {
     ],
      style:`a ${style} ${art} of`
 }
+
 var story2 = {
     narration: [`You are driving a*and suddenly you see a critter that looks like a*`,
     `you close your*and you hope*`,

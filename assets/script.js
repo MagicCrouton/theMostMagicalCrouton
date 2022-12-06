@@ -6,6 +6,7 @@ var quotes = [];
 var payLoad = [];
 var APIResponse=[];
 var captions=[];
+var clearEl = $('#clear');
 
 // API functions
 // this function takes in words and makes them better
@@ -108,6 +109,7 @@ setTimeout(function(){
         storySubmitBtnEl.attr('class', 'invisible');
         loadingEl.attr('class', 'loading');
 
+        comicLayoutEl.empty()
         for (i=0; i < storyGen.length; ++i) {
             var tempPayload = [];
             tempPayload[0] = $(`#payLoadA${i}`).val();
@@ -125,9 +127,8 @@ setTimeout(function(){
             }
 
             // fetchDallE(payLoad[1], comicLayoutEl, i)
-
+            var i = 1
             payLoad.forEach(element => {
-            var i = 1;
               fetchDallE(element, comicLayoutEl, i);
             i = i+1;
             })
@@ -136,3 +137,11 @@ setTimeout(function(){
             
 
 }, 5000)
+
+clearEl.on("click", () => {
+    console.log(`Cleared the display`)
+    pageOneEl.children().remove();
+  
+
+  })
+  
