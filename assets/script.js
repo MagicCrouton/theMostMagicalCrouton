@@ -9,7 +9,7 @@ var captions=[];
 var clearEl = $('#clear');
 
 // API functions
-// this function takes in words and makest them better
+// this function takes in words and makes them better
 function fetchText(payLoad,i) {
     fetch("https://api.openai.com/v1/completions", {
         method: 'POST',
@@ -101,9 +101,14 @@ setTimeout(function(){
         </span>`)
     }    
 
+    
     var storySubmitBtnEl = $('#storySubmit')
+    var loadingEl = $('#loading');
     storySubmitBtnEl.on('click', function(event){
         event.preventDefault(event);
+        storySubmitBtnEl.attr('class', 'invisible');
+        loadingEl.attr('class', 'loading');
+
         comicLayoutEl.empty()
         for (i=0; i < storyGen.length; ++i) {
             var tempPayload = [];
@@ -118,19 +123,18 @@ setTimeout(function(){
             currentTemp = currentTemp.join('');
             // console.log(currentTemp);
             // payLoad[i] = `${stories[randomGen].style} ${currentTemp}`;
-             payLoad[i] = ` ${currentTemp}`;           
+             payLoad[i] = ` ${currentTemp}`;       
             }
 
             // fetchDallE(payLoad[1], comicLayoutEl, i)
             var i = 1
             payLoad.forEach(element => {
               fetchDallE(element, comicLayoutEl, i);
-            i = i+1;  
+            i = i+1;
             })
-
-            
+        
 })
-
+            
 
 }, 5000)
 
