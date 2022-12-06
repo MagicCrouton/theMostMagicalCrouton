@@ -1,6 +1,6 @@
 var pageOneEl = $('#pageOne');
 var pageTwoEl = $('#pageTwo');
-var comicLayoutEl = $('#comic-layout')
+var comicLayoutEl = $('#comic-layout');
 var storySubmitBtnEl = $('#storySubmit');
 var quotes = [];
 var payLoad = [];
@@ -8,8 +8,8 @@ var APIResponse=[];
 var captions=[];
 
 // API functions
-// this function takes in words and makest them better
-function fetchText(payLoad) {
+// this function takes in words and makes them better
+function fetchText(payLoad,i) {
     fetch("https://api.openai.com/v1/completions", {
         method: 'POST',
         headers: {
@@ -21,7 +21,8 @@ function fetchText(payLoad) {
             "prompt": `make each element in the array a caption for a comic book pane 
                        separated by commas with the art styles removed ${payLoad}`,
             "max_tokens": 500,
-            "temperature": .5,
+
+            "temperature": .9,
         })
     })
     .then(response => {
@@ -29,8 +30,9 @@ function fetchText(payLoad) {
     })
     .then(data=>{
         APIResponse =data;
-        text= data.text;
-        console.log(text);
+        console.log(data.choices[0]);
+        captions[i]=(data.choices[0].text);
+        // captions.undefined returns back the string.
     })
         .catch(error => {
             console.log(error)
@@ -39,6 +41,8 @@ function fetchText(payLoad) {
         
 // this function calls to openAPI/DallE then returns the image url. payload is the string to feed the AI 
 // comicLayoutEl is the jquery element that the picture will append to and i is the iterator
+
+//payload is single string
 function fetchDallE(payLoad,comicLayoutEl,i) {
     fetch("https://api.openai.com/v1/images/generations", {
         method: 'POST',
@@ -58,6 +62,7 @@ function fetchDallE(payLoad,comicLayoutEl,i) {
     })
     .then(data=>{
         APIResponse =  data;
+        // console.log(data);
         pictureUrl= APIResponse.data[0].url;
         comicLayoutEl.append(`
         <div class="card spot${i}" style="width: 18rem;">
@@ -95,9 +100,14 @@ setTimeout(function(){
         </span>`)
     }    
 
+    
     var storySubmitBtnEl = $('#storySubmit')
+    var loadingEl = $('#loading');
     storySubmitBtnEl.on('click', function(event){
         event.preventDefault(event);
+        storySubmitBtnEl.attr('class', 'invisible');
+        loadingEl.attr('class', 'loading');
+
         for (i=0; i < storyGen.length; ++i) {
             var tempPayload = [];
             tempPayload[0] = $(`#payLoadA${i}`).val();
@@ -111,7 +121,7 @@ setTimeout(function(){
             currentTemp = currentTemp.join('');
             // console.log(currentTemp);
             // payLoad[i] = `${stories[randomGen].style} ${currentTemp}`;
-             payLoad[i] = ` ${currentTemp}`;           
+             payLoad[i] = ` ${currentTemp}`;       
             }
 
             // fetchDallE(payLoad[1], comicLayoutEl, i)
@@ -119,11 +129,10 @@ setTimeout(function(){
             payLoad.forEach(element => {
             var i = 1;
               fetchDallE(element, comicLayoutEl, i);
-            i = i+1;    
+            i = i+1;
             })
-
-            
+        
 })
-
+            
 
 }, 5000)
