@@ -73,3 +73,16 @@ var story4 = {
     ],
      style:`a ${style} ${art} of`
 };
+var story5 = {
+    narration: [`One day a*make(s) some wishes about becoming a(n)*`,
+    `the *tells a* about his/her wish`,
+    `The wish is also about *and*`,
+    `The* will be* if his/her wish comes true.`],
+     payLoadGuide:[
+    ['*','is having a wish about becoming', '*'],
+    ['*','then go share his/her wish with','*'],
+    ['The wish is also about','*','and','*'],
+    ['The','*','will be','*','if his/her wish comes true.']
+    ],
+     style:`a ${style} ${art} of`
+}
