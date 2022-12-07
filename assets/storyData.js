@@ -23,19 +23,19 @@ var story1 = {
     ],
      style:`a ${style} ${art} of`
 };
-var story2 = {
-    narration: [`You are driving a*and suddenly you see a critter that looks like a*`,
-    `you *and you hope*`,
-    `the critter grabs a*and*`,
-    `the critter*and everyone is*`],
-     payLoadGuide:[
-    ['a first person view of a person driving a','*','and suddenly seeing a', '*', 'on the road'],
-    ['a person','*','and praying about','*', "but you don't hear a thud"],
-    ['a','*','breakes through the wall holding a','*','to give to a magical crouton'],
-    ['a magical crouton is thinking','*','and a crowd of people around looking at the crouton is','*']
-    ],
-     style:`a ${style} ${art} of`
-}
+// var story2 = {
+//     narration: [`You are driving a*and suddenly you see a critter that looks like a*`,
+//     `you *and you hope*`,
+//     `the critter grabs a*and*`,
+//     `the critter*and everyone is*`],
+//      payLoadGuide:[
+//     ['a first person view of a person driving a','*','and suddenly seeing a', '*', 'on the road'],
+//     ['a person','*','and praying about','*', "but you don't hear a thud"],
+//     ['a','*','breakes through the wall holding a','*','to give to a magical crouton'],
+//     ['a magical crouton is thinking','*','and a crowd of people around looking at the crouton is','*']
+//     ],
+//      style:`a ${style} ${art} of`
+// }
 
 var story2 = {
     narration: [`You are driving a*and suddenly you see a critter that looks like a*`,
@@ -48,41 +48,41 @@ var story2 = {
      tile4:'Magical Crouton holding a',
 };
 var story3 = {
-    narration: [`The most Magical Crouton has decided to fight a * with a*`,
-    `he remembers his * and decides to *`,
-    `suddenly a * burst through to door with a*`,
-    `the most Magical Crouton thinks * everyone watching is *`],
+    narration: [`While driving out of a tunnel a * is suddenly dropped on the planet of *`,
+    `He/she encouters a * and that can also *`,
+    `On this planet of * there are also  *`,
+    `They eventually become *, and everyone is *`],
      payLoadGuide:[
-    ['a Magical Crouton fights a','*','holding a', '*'],
-    ['a Magical Crouton remebers his','*','and decides to','*'],
-    ['a','*','breakes through the wall holding a','*','to give to a magical crouton'],
-    ['a magical crouton is thinking','*','and a crowd of people around looking at the crouton is','*']
+    ['A','*','is driving out of tunnel, then being dropped on the plannet of', '*'],
+    ['He/she encounters a ','*','it can also','*'],
+    ['On this planet of','*','there are also','*'],
+    ['They eventually become','*','and everyone is ','*']
     ],
      style:`a ${style} ${art} of`
 };
+// var story4 = {
+//     narration: [`The most Magical Crouton has decided to fight a * with a*`,
+//     `he remembers his * and decides to *`,
+//     `suddenly a * burst through to door with a*`,
+//     `the most Magical Crouton thinks * everyone watching is *`],
+//      payLoadGuide:[
+//     ['a Magical Crouton fights a','*','holding a', '*'],
+//     ['a Magical Crouton remebers his','*','and decides to','*'],
+//     ['a','*','breakes through the wall holding a','*','to give to a magical crouton'],
+//     ['a magical crouton is thinking','*','and a crowd of people around looking at the crouton is','*']
+//     ],
+//      style:`a ${style} ${art} of`
+// };
 var story4 = {
-    narration: [`The most Magical Crouton has decided to fight a * with a*`,
-    `he remembers his * and decides to *`,
-    `suddenly a * burst through to door with a*`,
-    `the most Magical Crouton thinks * everyone watching is *`],
-     payLoadGuide:[
-    ['a Magical Crouton fights a','*','holding a', '*'],
-    ['a Magical Crouton remebers his','*','and decides to','*'],
-    ['a','*','breakes through the wall holding a','*','to give to a magical crouton'],
-    ['a magical crouton is thinking','*','and a crowd of people around looking at the crouton is','*']
-    ],
-     style:`a ${style} ${art} of`
-};
-var story5 = {
-    narration: [`One day a*make(s) some wishes about becoming a(n)*`,
-    `the *tells a* about his/her wish`,
+    narration: [`One day a *make(s) some wishes about becoming a(n)*`,
+    `Later on, the * share his/her wish with a friend a*`,
     `The wish is also about *and*`,
-    `The* will be* if his/her wish comes true.`],
+    `If the wish comes true, the * will be*.`],
      payLoadGuide:[
     ['*','is having a wish about becoming', '*'],
     ['*','then go share his/her wish with','*'],
     ['The wish is also about','*','and','*'],
-    ['The','*','will be','*','if his/her wish comes true.']
+    ['The ','*','will be','*','if his/her wish comes true.']
     ],
      style:`a ${style} ${art} of`
 }
