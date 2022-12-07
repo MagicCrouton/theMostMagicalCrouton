@@ -19,8 +19,7 @@ function fetchText(payLoad,i) {
         },
         body: JSON.stringify({
             "model": "text-davinci-003",
-            "prompt": `make each element in the array a caption for a comic book pane 
-                       separated by commas with the art styles removed ${payLoad}`,
+            "prompt": `make the following a caption for a scene ${payLoad}`,
             "max_tokens": 500,
 
             "temperature": .9,
@@ -31,7 +30,6 @@ function fetchText(payLoad,i) {
     })
     .then(data=>{
         APIResponse =data;
-        console.log(data.choices[0]);
         captions[i]=(data.choices[0].text);
         // captions.undefined returns back the string.
     })
@@ -69,7 +67,7 @@ function fetchDallE(payLoad,comicLayoutEl,i) {
         <div class="card spot${i}" style="width: 18rem;">
         <img class="card-img-top" src="${APIResponse.data[0].url}" alt="Image${i}">
         <div class="card-body">
-          <p class="card-text">${payLoad}</p>
+          <p class="card-text">${captions[i]}</p>
         </div>`)
     })
         .catch(error => {
@@ -129,6 +127,7 @@ setTimeout(function(){
             // fetchDallE(payLoad[1], comicLayoutEl, i)
             var i = 1
             payLoad.forEach(element => {
+              fetchText(element,i);
               fetchDallE(element, comicLayoutEl, i);
             i = i+1;
             })

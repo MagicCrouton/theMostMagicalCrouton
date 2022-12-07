@@ -13,7 +13,17 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="jumbotron jumbotron-fluid" 
+        style="background-image: url('./Images/comic-strip-1.jpg'); background-size:cover; height: 50vh ;
+        background-position: center; background-repeat:space; background-color: black; margin: 0;">
+            <div class="container-fluid">
+            </div>
+        </div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"
+  style="align: center ;">
     <a class="navbar-brand" href="#">Magical Crouton</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -83,6 +93,7 @@
               </div>
               <button id = "storySubmit" type="submit" class="btn btn-primary">Submit</button>
               <button id="clear" class="btn btn-primary">Clear</button>
+              <a href="initialSplash.html" button id="refresh" class="btn btn-primary"> refresh </a>
          </form>   
 
     <!-- <div class="input-group flex-nowrap">
@@ -107,3 +118,12 @@
 <script src="/assets/storyData.js"></script>
 <script src="/assets/script.js"> </script>
 </html>
+
+set loading screen
+while (loadingNuke === false) {
+  if (timeout === 4({
+    loadingNuke = true
+    <clear screen logic></4>
+  })
+  
+}
