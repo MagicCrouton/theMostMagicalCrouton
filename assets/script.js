@@ -69,6 +69,15 @@ function fetchDallE(payLoad,comicLayoutEl,i) {
         <div class="card-body">
           <p class="card-text">${captions[i]}</p>
         </div>`)
+
+        const historyImg = localStorage.getItem('historyImg');
+        if(historyImg != null){
+            const historyImgArr = JSON.parse(historyImg);
+            historyImgArr.push(APIResponse.data[0].url)
+        }else{
+            localStorage.setItem('historyImg',JSON.stringify([APIResponse.data[0].url]))
+        }
+        
     })
         .catch(error => {
             console.log(error)
