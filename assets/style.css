@@ -59,3 +59,11 @@ footer {
         transform: rotate(1turn);
     }
 }
+
+/* h3 {
+    text-align: center;
+} */
+
+.story-list {
+    text-align: center;
+}
