@@ -42,10 +42,11 @@ var story2 = {
     `you close your*and you hope*`,
     `the critter grabs a*and*`,
     `the critter*and everyone is*`],
-     tile1: 'Magical Crouton holding a',
-     tile2:'Magical Crouton holding a',
-     tile3:'Magical Crouton holding a',
-     tile4:'Magical Crouton holding a',
+    payLoadGuide:[
+    ['first person view of someone driving a','*', 'and you see a', '*'],
+    ['a driver closing his or her','*','and thinking','*'],
+    ['a squirell swears a blood oath holding a','*','and','*'],
+    ['a squirell','*','and','*']]
 };
 var story3 = {
     narration: [`While driving out of a tunnel a * is suddenly dropped on the planet of *`,

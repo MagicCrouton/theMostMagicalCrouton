@@ -3,6 +3,11 @@ var pageTwoEl = $('#pageTwo');
 var pageThreeEl = $('pageThree');
 var comicLayoutEl = $('#comic-layout');
 var storySubmitBtnEl = $('#storySubmit');
+var comicTargetEl = $('#comicTarget');
+var target1EL = $('#target1');
+var target2EL = $('#target2');
+var target3EL = $('#target3');
+var target4EL = $('#target4');
 var quotes = [];
 var payLoad = [];
 var APIResponse=[];
@@ -43,7 +48,7 @@ function fetchText(payLoad,i) {
 // comicLayoutEl is the jquery element that the picture will append to and i is the iterator
 
 //payload is single string
-function fetchDallE(payLoad,comicLayoutEl,i) {
+function fetchDallE(payLoad,x,i) {
     fetch("https://api.openai.com/v1/images/generations", {
         method: 'POST',
         headers: {
@@ -64,17 +69,15 @@ function fetchDallE(payLoad,comicLayoutEl,i) {
         APIResponse =  data;
         // console.log(data);
         pictureUrl= APIResponse.data[0].url;
-        comicLayoutEl.append(`
-        <div class="card spot${i}" style="width: 18rem;">
-        <img class="card-img-top" src="${APIResponse.data[0].url}" alt="Image${i}">
-        <div class="card-body">
-          <p class="card-text">${captions[i]}</p>
-        </div>`)
-
+        x.append(`
+        <figure class="figure">
+            <img src="${APIResponse.data[0].url}" class="figure-img img-fluid rounded" alt="Image${i}">
+            <figcaption class="figure-caption">${captions[i]}</figcaption>
+        </figure>`);
         const historyImg = localStorage.getItem('historyImg');
         if(historyImg != null){
             const historyImgArr = JSON.parse(historyImg);
-            historyImgArr.push(APIResponse.data[0].url)
+            historyImgArr.push(APIResponse.data[0].url);
         }else{
             localStorage.setItem('historyImg',JSON.stringify([APIResponse.data[0].url]))
         }
@@ -142,7 +145,18 @@ setTimeout(function(){
             var i = 1
             payLoad.forEach(element => {
               fetchText(element,i);
-              fetchDallE(element, comicLayoutEl, i);
+              if (i === 1) {
+                fetchDallE(element, target1EL, i);
+              }
+              else if (i === 2) {
+                fetchDallE(element, target2EL, i);
+              }
+              else if (i === 3) {
+                fetchDallE(element, target3EL, i);
+              }
+              else {
+                fetchDallE(element, target4EL, i);
+              }
             i = i+1;
             })
             
