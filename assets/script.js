@@ -1,5 +1,6 @@
 var pageOneEl = $('#pageOne');
 var pageTwoEl = $('#pageTwo');
+var pageThreeEl = $('pageThree');
 var comicLayoutEl = $('#comic-layout');
 var storySubmitBtnEl = $('#storySubmit');
 var quotes = [];
@@ -86,7 +87,7 @@ function fetchDallE(payLoad,comicLayoutEl,i) {
 
 setTimeout(function(){
 
-    pageOneEl.attr('class', 'invisible');
+    pageOneEl.remove();
     pageTwoEl.removeAttr('class');
     for (i=0; i < storyGen.length; ++i){
         var temp =storyGen[i].split("*");
