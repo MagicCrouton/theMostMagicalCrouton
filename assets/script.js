@@ -99,12 +99,16 @@ setTimeout(function(){
         </span>`)
     }    
 
+
     
     var storySubmitBtnEl = $('#storySubmit')
     var loadingEl = $('#loading');
+
     storySubmitBtnEl.on('click', function(event){
         event.preventDefault(event);
         storySubmitBtnEl.attr('class', 'invisible');
+        clearEl.attr('class', 'invisible');
+        pageTwoEl.attr('class', 'invisible');
         loadingEl.attr('class', 'loading');
 
         comicLayoutEl.empty()
@@ -131,9 +135,13 @@ setTimeout(function(){
               fetchDallE(element, comicLayoutEl, i);
             i = i+1;
             })
-        
-})
             
+            setTimeout(function(){
+                loadingEl.removeAttr('class');
+            },5000)
+
+})
+
 
 }, 5000)
 
