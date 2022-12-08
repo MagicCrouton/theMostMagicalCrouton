@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
+        <title>The Most Magical Crouton</title>
+</head>
+
+<body>
+
+  <div class="jumbotron jumbotron-fluid" 
+        style="background-image: url('./Images/comic-strip-1.jpg'); background-size:cover; height: 50vh ;
+        background-position: center; background-repeat:space; background-color: black; margin: 0;">
+            <div class="container-fluid">
+            </div>
+        </div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"
+  style="align-self: center ;">
+    <a class="navbar-brand" href="#">Magical Crouton</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://labs.openai.com/">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">History</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <br>  
+<div id="pageOne">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Remember Mad Libs?</h1>
+        <p class="lead">Fill in the blanks!</p>
+      </div>
+  </div>
+</div>
+
+<div id="loading" class="">
+  <!-- loading icon will appear here -->
+</div>
+
+<div id="pageThree">
+  <div class="jumbotron jumbotron-fluid d-flex" id = "comic-layout">
+    <!-- <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div> -->
+    </div>
+</div>
+
+
+<div id="pageTwo" class="invisible">
+    <section class="Location">
+        <form>
+            <div class="form-group">
+              <label id="story1" for="storyOne">What's for story one?</label>
+              <!-- <input id="storyFormOne" type="email" class="form-control" aria-describedby="emailHelp">
+              <input id="storyFormTwo" type="email" class="form-control" aria-describedby="emailHelp"> -->
+            </div>
+            <div class="form-group">
+                <label id="story2" for="storyTwo">What's for story two?</label>
+                <!-- <input id="storyFormThree" type="email" class="form-control" aria-describedby="emailHelp">
+                <input id="storyFormFour" type="email" class="form-control" aria-describedby="emailHelp"> -->
+            </div>
+            <div class="form-group">
+                <label id="story3" for="storyThree">What's for story three?</label>
+                <!-- <input id="storyFormFive" type="email" class="form-control" aria-describedby="emailHelp">
+                <input id="storyFormSix" type="email" class="form-control" aria-describedby="emailHelp"> -->
+            </div>
+
+            <div class="form-group">
+                <label id="story4" for="storyFour">What's for story four?</label>
+                <!-- <input id="storyFormSeven" type="email" class="form-control" aria-describedby="emailHelp">
+                <input id="storyFormEight" type="email" class="form-control" aria-describedby="emailHelp"> -->
+              </div>
+              <button id = "storySubmit" type="submit" class="btn btn-primary">Submit</button>
+              <button id="clear" class="btn btn-primary">Clear</button>
+              <a href="./index.html" button id="refresh" class="btn btn-primary"> refresh </a>
+         </form>   
+
+    <!-- <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping"> Location </span>
+        <input type="text" class="form-control" placeholder="Insert Location" aria-label="Location"
+            aria-describedby="addon-wrapping">
+    </div>
+    <br>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Attraction</span>
+        <input type="text" class="form-control" placeholder="Ex. National Parks" aria-label="Parks"
+            aria-describedby="addon-wrapping">
+    </div> -->
+
+</div>
+    <footer> The Magic Crouton, Copyright &copy; 2022 </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/assets/storyData.js"></script>
+<script src="/assets/script.js"> </script>
+</html>
+
+<!-- set loading screen
+while (loadingNuke === false) {
+  if (timeout === 4({
+    loadingNuke = true
+    <clear screen logic></4>
+  })
+  
+} -->
