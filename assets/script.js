@@ -4,15 +4,33 @@ var pageThreeEl = $('pageThree');
 var comicLayoutEl = $('#comic-layout');
 var storySubmitBtnEl = $('#storySubmit');
 var comicTargetEl = $('#comicTarget');
-var target1EL = $('#target1');
+var target1EL = $('target1');
 var target2EL = $('#target2');
 var target3EL = $('#target3');
 var target4EL = $('#target4');
+var saveBtnEl = $('#saveBtn');
 var quotes = [];
 var payLoad = [];
 var APIResponse=[];
 var captions=[];
 var clearEl = $('#clear');
+var urls = [];
+var comicText = [];
+
+// checks to see if there is local memory for the array
+if(historyImg != null){
+    var historyImgArr = JSON.parse(historyImg);
+    var historyCapArr = JSON.parse(historyCap);
+}else {
+    localStorage.setItem('historyImg')
+}
+
+    // for (n=0; n < captions.length; ++n) {
+    //     var tempImg = urls[n];
+    //     var tempCap = captions[n];
+    //     historyImgArr.push(tempImg);
+    //     historyCapArr.push(tempCap);
+    // }
 
 // API functions
 // this function takes in words and makes them better
@@ -69,18 +87,20 @@ function fetchDallE(payLoad,x,i) {
         APIResponse =  data;
         // console.log(data);
         pictureUrl= APIResponse.data[0].url;
+        urls[i]=pictureUrl;
         x.append(`
         <figure class="figure">
             <img src="${APIResponse.data[0].url}" class="figure-img img-fluid rounded" alt="Image${i}">
             <figcaption class="figure-caption">${captions[i]}</figcaption>
         </figure>`);
-        const historyImg = localStorage.getItem('historyImg');
-        if(historyImg != null){
-            const historyImgArr = JSON.parse(historyImg);
-            historyImgArr.push(APIResponse.data[0].url);
-        }else{
-            localStorage.setItem('historyImg',JSON.stringify([APIResponse.data[0].url]))
-        }
+        // const historyImg = localStorage.getItem('historyImg');
+        // if(historyImg != null){
+        //     const historyImgArr = JSON.parse(historyImg);
+        //     historyImgArr.push(APIResponse.data[0].url);
+        // }else{
+        //     localStorage.setItem('historyImg',JSON.stringify([APIResponse.data[0].url]))
+        // }
+
         
     })
         .catch(error => {
@@ -174,5 +194,16 @@ clearEl.on("click", () => {
     pageOneEl.children().remove();
   
 
+  })
+
+  saveBtnEl.on('click', function() {
+    for (n=0; n < captions.length; ++n) {
+        var tempImg = urls[n];
+        var tempCap = captions[n];
+        historyImgArr.push(tempImg);
+        historyCapArr.push(tempCap);
+    }
+    localStorage.setItem('historyImg', `${JSON.stringify(historyImgArr)}`);
+    localStorage.setItem('historyCap', `${JSON.stringify(historyCapArr)}`);
   })
   
