@@ -186,6 +186,11 @@ clearEl.on("click", () => {
   })
 
   saveBtnEl.on('click', function() {
+    if (localStorage.getItem('historyImg')===null){
+        var historyImgArr = [];
+        var historyCapArr = [];
+    }
+
     for (n=0; n < captions.length; ++n) {
         var tempImg = urls[n];
         var tempCap = captions[n];
@@ -194,5 +199,5 @@ clearEl.on("click", () => {
     }
     localStorage.setItem('historyImg', `${JSON.stringify(historyImgArr)}`);
     localStorage.setItem('historyCap', `${JSON.stringify(historyCapArr)}`);
-  })
+  }) 
   
