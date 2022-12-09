@@ -18,11 +18,9 @@ var urls = [];
 var comicText = [];
 
 // checks to see if there is local memory for the array
-if(historyImg != null){
+if(localStorage.getItem('historyImg') != null){
     var historyImgArr = JSON.parse(historyImg);
     var historyCapArr = JSON.parse(historyCap);
-}else {
-    localStorage.setItem('historyImg')
 }
 
     // for (n=0; n < captions.length; ++n) {
@@ -93,15 +91,6 @@ function fetchDallE(payLoad,x,i) {
             <img src="${APIResponse.data[0].url}" class="figure-img img-fluid rounded" alt="Image${i}">
             <figcaption class="figure-caption">${captions[i]}</figcaption>
         </figure>`);
-        // const historyImg = localStorage.getItem('historyImg');
-        // if(historyImg != null){
-        //     const historyImgArr = JSON.parse(historyImg);
-        //     historyImgArr.push(APIResponse.data[0].url);
-        // }else{
-        //     localStorage.setItem('historyImg',JSON.stringify([APIResponse.data[0].url]))
-        // }
-
-        
     })
         .catch(error => {
             console.log(error)
