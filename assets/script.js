@@ -4,15 +4,28 @@ var pageThreeEl = $('pageThree');
 var comicLayoutEl = $('#comic-layout');
 var storySubmitBtnEl = $('#storySubmit');
 var comicTargetEl = $('#comicTarget');
-var target1EL = $('#target1');
+var target1EL = $('target1');
 var target2EL = $('#target2');
 var target3EL = $('#target3');
 var target4EL = $('#target4');
+var saveBtnEl = $('#saveBtn');
 var quotes = [];
 var payLoad = [];
 var APIResponse=[];
 var captions=[];
 var clearEl = $('#clear');
+var urls = [];
+var comicText = [];
+
+// checks to see if there is local memory for the array
+
+
+    // for (n=0; n < captions.length; ++n) {
+    //     var tempImg = urls[n];
+    //     var tempCap = captions[n];
+    //     historyImgArr.push(tempImg);
+    //     historyCapArr.push(tempCap);
+    // }
 
 // API functions
 // this function takes in words and makes them better
@@ -69,19 +82,12 @@ function fetchDallE(payLoad,x,i) {
         APIResponse =  data;
         // console.log(data);
         pictureUrl= APIResponse.data[0].url;
+        urls[i]=pictureUrl;
         x.append(`
         <figure class="figure">
-            <img src="${APIResponse.data[0].url}" class="figure-img img-fluid rounded" alt="Image${i}">
-            <figcaption class="figure-caption">${captions[i]}</figcaption>
+            <img src="${APIResponse.data[0].url}" class="figure-img img-fluid rounded" alt="Image${i+1}">
+            <figcaption class="figure-caption">${captions[i+1]}</figcaption>
         </figure>`);
-        const historyImg = localStorage.getItem('historyImg');
-        if(historyImg != null){
-            const historyImgArr = JSON.parse(historyImg);
-            historyImgArr.push(APIResponse.data[0].url);
-        }else{
-            localStorage.setItem('historyImg',JSON.stringify([APIResponse.data[0].url]))
-        }
-        
     })
         .catch(error => {
             console.log(error)
@@ -142,16 +148,16 @@ setTimeout(function(){
             }
 
             // fetchDallE(payLoad[1], comicLayoutEl, i)
-            var i = 1
+            var i = 0
             payLoad.forEach(element => {
               fetchText(element,i);
-              if (i === 1) {
+              if (i === 0) {
                 fetchDallE(element, target1EL, i);
               }
-              else if (i === 2) {
+              else if (i === 1) {
                 fetchDallE(element, target2EL, i);
               }
-              else if (i === 3) {
+              else if (i === 2) {
                 fetchDallE(element, target3EL, i);
               }
               else {
@@ -175,4 +181,38 @@ clearEl.on("click", () => {
   
 
   })
+
+  saveBtnEl.on('click', function() {
+    if (localStorage.getItem('historyImg')===null){
+        var historyCapArr = [];
+        var historyImgArr = [];
+        for (n=0; n < 4; ++n) {
+            var tempImg = urls[n];
+            var tempCap = captions[n];
+            console.log(tempCap);
+            console.log(tempImg);
+            historyImgArr[n]=tempImg;
+            historyCapArr[n]=tempCap;
+        }
+
+    
+        localStorage.setItem('historyImg', `${JSON.stringify(historyImgArr)}`);
+        localStorage.setItem('historyCap', `${JSON.stringify(historyCapArr)}`);
+    }
+
+    else {
+        var historyImgArr = JSON.parse(localStorage.getItem('historyImg'));
+        var historyCapArr = JSON.parse(localStorage.getItem('historyCap'));
+
+
+    for (n=0; n < captions.length; ++n) {
+        historyImgArr.push(urls[n]) 
+        historyCapArr.push(captions[n]);
+    }
+    }
+
+
+    localStorage.setItem('historyImg', `${JSON.stringify(historyImgArr)}`);
+    localStorage.setItem('historyCap', `${JSON.stringify(historyCapArr)}`);
+  }) 
   
