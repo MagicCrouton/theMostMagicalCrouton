@@ -18,10 +18,7 @@ var urls = [];
 var comicText = [];
 
 // checks to see if there is local memory for the array
-if(localStorage.getItem('historyImg') != null){
-    var historyImgArr = JSON.parse(historyImg);
-    var historyCapArr = JSON.parse(historyCap);
-}
+
 
     // for (n=0; n < captions.length; ++n) {
     //     var tempImg = urls[n];
@@ -186,13 +183,24 @@ clearEl.on("click", () => {
   })
 
   saveBtnEl.on('click', function() {
+    if (localStorage.getItem('historyImg')===null){
+        var historyImgArr = [];
+        var historyCapArr = [];
+    }
+
+    else {
+        var historyImgArr = JSON.parse(localStorage.getItem('historyImg'));
+        var historyCapArr = JSON.parse(localStorage.getItem('historyCap'));
+    }
+
     for (n=0; n < captions.length; ++n) {
         var tempImg = urls[n];
         var tempCap = captions[n];
-        historyImgArr.push(tempImg);
-        historyCapArr.push(tempCap);
     }
+    historyImgArr.push(tempImg);
+    historyCapArr.push(tempCap);
+
     localStorage.setItem('historyImg', `${JSON.stringify(historyImgArr)}`);
     localStorage.setItem('historyCap', `${JSON.stringify(historyCapArr)}`);
-  })
+  }) 
   
