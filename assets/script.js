@@ -85,8 +85,8 @@ function fetchDallE(payLoad,x,i) {
         urls[i]=pictureUrl;
         x.append(`
         <figure class="figure">
-            <img src="${APIResponse.data[0].url}" class="figure-img img-fluid rounded" alt="Image${i}">
-            <figcaption class="figure-caption">${captions[i]}</figcaption>
+            <img src="${APIResponse.data[0].url}" class="figure-img img-fluid rounded" alt="Image${i+1}">
+            <figcaption class="figure-caption">${captions[i+1]}</figcaption>
         </figure>`);
     })
         .catch(error => {
@@ -148,16 +148,16 @@ setTimeout(function(){
             }
 
             // fetchDallE(payLoad[1], comicLayoutEl, i)
-            var i = 1
+            var i = 0
             payLoad.forEach(element => {
               fetchText(element,i);
-              if (i === 1) {
+              if (i === 0) {
                 fetchDallE(element, target1EL, i);
               }
-              else if (i === 2) {
+              else if (i === 1) {
                 fetchDallE(element, target2EL, i);
               }
-              else if (i === 3) {
+              else if (i === 2) {
                 fetchDallE(element, target3EL, i);
               }
               else {
@@ -184,21 +184,33 @@ clearEl.on("click", () => {
 
   saveBtnEl.on('click', function() {
     if (localStorage.getItem('historyImg')===null){
-        var historyImgArr = [];
         var historyCapArr = [];
+        var historyImgArr = [];
+        for (n=0; n < 4; ++n) {
+            var tempImg = urls[n];
+            var tempCap = captions[n];
+            console.log(tempCap);
+            console.log(tempImg);
+            historyImgArr[n]=tempImg;
+            historyCapArr[n]=tempCap;
+        }
+
+    
+        localStorage.setItem('historyImg', `${JSON.stringify(historyImgArr)}`);
+        localStorage.setItem('historyCap', `${JSON.stringify(historyCapArr)}`);
     }
 
     else {
         var historyImgArr = JSON.parse(localStorage.getItem('historyImg'));
         var historyCapArr = JSON.parse(localStorage.getItem('historyCap'));
-    }
+
 
     for (n=0; n < captions.length; ++n) {
-        var tempImg = urls[n];
-        var tempCap = captions[n];
+        historyImgArr.push(urls[n]) 
+        historyCapArr.push(captions[n]);
     }
-    historyImgArr.push(tempImg);
-    historyCapArr.push(tempCap);
+    }
+
 
     localStorage.setItem('historyImg', `${JSON.stringify(historyImgArr)}`);
     localStorage.setItem('historyCap', `${JSON.stringify(historyCapArr)}`);
