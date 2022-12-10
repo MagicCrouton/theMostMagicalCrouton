@@ -19,6 +19,10 @@ body { font-family: 'Roboto Mono', monospace;
 
 } 
 
+#navBar {
+    background-image: url('/Images/aliennavbar.png');
+}
+
 form {
     text-align: center;
     font-size: x-large;
@@ -31,7 +35,7 @@ input[type=text] {
 footer {
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         padding: 20px;
-        margin-top: 10px;
+        margin-top: 80px;
         color: white;
         background-color: #333;
         text-align: center;
