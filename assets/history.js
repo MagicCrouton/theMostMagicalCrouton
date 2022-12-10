@@ -28,7 +28,7 @@ for (i=0; i<imageArr.length; i) {
         tempTarget.append(`
         <figure class="figure">
         <img src="${imageArr[i+n]}" class="figure-img img-fluid rounded" alt="Image${i+n}">
-        <figcaption class="figure-caption">${capArr[i+1]}</figcaption>
+        <figcaption class="figure-caption">${capArr[i+n]}</figcaption>
         </figure>`)
     }
     i = i + 4;
