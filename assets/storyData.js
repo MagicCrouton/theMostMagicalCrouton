@@ -43,9 +43,9 @@ var story2 = {
     `The critter grabs a * and *!`,
     `The critter * and everyone is *.`],
     narration: [`You are driving a*and suddenly you see a critter that looks like a*.`,
-    `you close your*and you hope*.`,
-    `the critter grabs a*and*.`,
-    `the critter*and everyone is*.`],
+    `You close your*and you hope*.`,
+    `The critter grabs a*and*.`,
+    `The critter*and everyone is*.`],
     payLoadGuide:[
     ['first person view of someone driving a','*', 'and you see a', '*'],
     ['a driver closing his or her','*','and thinking','*'],
