@@ -163,9 +163,14 @@ setTimeout(function(){
 
 }, 5000)
 
-clearEl.on("click", () => {
-    console.log(`Cleared the display`)
-    pageOneEl.children().remove();
+clearEl.on("click", (event) => {
+    event.preventDefault();
+    for (i=0;i<storyGen.length; ++i) {
+     var Aremove = $(`#payLoadA${i}`);
+     var Bremove = $(`#payLoadB${i}`);
+     Aremove.val('');
+     Bremove.val('');
+    }
   })
 
   saveBtnEl.on('click', function() {
