@@ -132,12 +132,9 @@ setTimeout(function(){
                     currentTemp[index] = ` ${tempPayload[n]} `;
                 }
             currentTemp = currentTemp.join('');
-            // console.log(currentTemp);
             payLoad[i] = `${storyCurrent.style} ${currentTemp}`;
-            //  payLoad[i] = `${currentTemp}`;
             }
 
-            // fetchDallE(payLoad[1], comicLayoutEl, i)
             var i = 0
             payLoad.forEach(element => {
               fetchText(element,i);
