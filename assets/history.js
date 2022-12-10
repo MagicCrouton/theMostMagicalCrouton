@@ -10,26 +10,26 @@ if (localStorage.getItem('historyImg') === null) {
 var imageArr = JSON.parse(localStorage.getItem('historyImg'));
 var capArr = JSON.parse(localStorage.getItem('historyCap'));
 
-// for (i=0; i<imageArr.length; i+4) {
-//     storyListEl.append(`
-//       <div class="container">
-//         <div class="row">
-//           <div id="target${i+1}" class="col col-6"></div>
-//           <div id="target${i+2}" class="col col-6"></div>
-//         </div>
-//         <div class="row">
-//           <div id="target${i+3}" class="col col-6"></div>
-//           <div id="target${i+4}" class="col col-6"></div>
-//         </div>
-//       </div>`
-//                      );
-//     for (n=0; n<4; ++n) {
-//         var tempTarget = $(`#target${i+n}`);
-//         tempTarget.append(`
-//         <figure class="figure">
-//         <img src="${imageArr[i+n]}" class="figure-img img-fluid rounded" alt="Image${i+n}">
-//         <figcaption class="figure-caption">${capArr[i+n]}</figcaption>
-//         </figure>`)
-//     }
-
-// }
+for (i=0; i<imageArr.length; i) {
+    console.log(i);
+    storyListEl.append(`
+      <div class="container">
+        <div class="row">
+          <div id="target${i}" class="col col-6"></div>
+          <div id="target${i+1}" class="col col-6"></div>
+        </div>
+        <div class="row">
+          <div id="target${i+2}" class="col col-6"></div>
+          <div id="target${i+3}" class="col col-6"></div>
+        </div>
+      </div>`);
+    for (n=0; n<4; ++n) {
+        var tempTarget = $(`#target${i+n}`);
+        tempTarget.append(`
+        <figure class="figure">
+        <img src="${imageArr[i+n]}" class="figure-img img-fluid rounded" alt="Image${i+n}">
+        <figcaption class="figure-caption">${capArr[i+n]}</figcaption>
+        </figure>`)
+    }
+    i = i + 4;
+}
