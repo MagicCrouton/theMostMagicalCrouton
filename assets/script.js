@@ -132,7 +132,7 @@ setTimeout(function(){
             currentTemp = currentTemp.join('');
             // console.log(currentTemp);
             // payLoad[i] = `${stories[randomGen].style} ${currentTemp}`;
-             payLoad[i] = ` ${currentTemp}`;       
+             payLoad[i] = `${currentTemp}`;
             }
 
             // fetchDallE(payLoad[1], comicLayoutEl, i)
