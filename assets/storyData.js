@@ -11,10 +11,10 @@ var style = subStyle[randomGen];
 
 
 var story1 = {
-    narration: [`The most Magical Crouton has decided to fight a * with a *.`,
-    `He remembers his * and decides to *.`,
-    `Suddenly, a * bursts through the door with a *!`,
-    `The most Magical Crouton thinks, "*, everyone watching is *!`],
+    narration: [`The most Magical Crouton has decided to fight a * with a *..`,
+    `He remembers his * and decides to *..`,
+    `Suddenly, a * bursts through the door with a *.!`,
+    `The most Magical Crouton thinks, "*, everyone watching is *.!`],
      payLoadGuide:[
     ['a Magical Crouton fights a', '*', 'holding a', '*'],
     ['a Magical Crouton remebers his', '*', 'and decides to', '*'],
@@ -42,6 +42,10 @@ var story2 = {
     `You close your * and you hope *.`,
     `The critter grabs a * and *!`,
     `The critter * and everyone is *.`],
+    narration: [`You are driving a*and suddenly you see a critter that looks like a*.`,
+    `you close your*and you hope*.`,
+    `the critter grabs a*and*.`,
+    `the critter*and everyone is*.`],
     payLoadGuide:[
     ['first person view of someone driving a','*', 'and you see a', '*'],
     ['a driver closing his or her','*','and thinking','*'],
@@ -50,6 +54,7 @@ var story2 = {
 };
 var story3 = {
     narration: [`While driving out of a tunnel, a * is suddenly dropped on the planet of *.`,
+    narration: [`While driving out of a tunnel a * is suddenly dropped on the planet of *.`,
     `He/she encouters a * and that can also *.`,
     `On this planet of * there are also  *.`,
     `They eventually become *, and everyone is *.`],
@@ -79,6 +84,10 @@ var story4 = {
     `Later on, the * shares his/her wish with a friend, a *!`,
     `The wish is also about * and *.`,
     `If the wish comes true, the * will be *!`],
+    narration: [`One day a *make(s) some wishes about becoming a(n)*.`,
+    `Later on, the * share his/her wish with a friend a*.`,
+    `The wish is also about *and*.`,
+    `If the wish comes true, the * will be*.`],
      payLoadGuide:[
     ['*','is having a wish about becoming', '*'],
     ['*','then go share his/her wish with','*'],
