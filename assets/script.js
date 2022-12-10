@@ -4,28 +4,17 @@ var pageThreeEl = $('pageThree');
 var comicLayoutEl = $('#comic-layout');
 var storySubmitBtnEl = $('#storySubmit');
 var comicTargetEl = $('#comicTarget');
-var target1EL = $('target1');
+var target1EL = $('#target1');
 var target2EL = $('#target2');
 var target3EL = $('#target3');
 var target4EL = $('#target4');
 var saveBtnEl = $('#saveBtn');
 var quotes = [];
 var payLoad = [];
-var APIResponse=[];
 var captions=[];
 var clearEl = $('#clear');
 var urls = [];
 var comicText = [];
-
-// checks to see if there is local memory for the array
-
-
-    // for (n=0; n < captions.length; ++n) {
-    //     var tempImg = urls[n];
-    //     var tempCap = captions[n];
-    //     historyImgArr.push(tempImg);
-    //     historyCapArr.push(tempCap);
-    // }
 
 // API functions
 // this function takes in words and makes them better
@@ -39,7 +28,7 @@ function fetchText(payLoad,i) {
         body: JSON.stringify({
             "model": "text-davinci-003",
             "prompt": `make the following a caption for a scene ${payLoad}`,
-            "max_tokens": 500,
+            "max_tokens": 100,
 
             "temperature": .9,
         })
@@ -76,7 +65,7 @@ function fetchDallE(payLoad,x,i) {
         })
     })
     .then(response => {
-        return response.json()
+        return response.json();
     })
     .then(data=>{
         APIResponse =  data;
@@ -86,7 +75,7 @@ function fetchDallE(payLoad,x,i) {
         x.append(`
         <figure class="figure">
             <img src="${APIResponse.data[0].url}" class="figure-img img-fluid rounded" alt="Image${i+1}">
-            <figcaption class="figure-caption">${captions[i+1]}</figcaption>
+            <figcaption class="figure-caption">${captions[i]}</figcaption>
         </figure>`);
     })
         .catch(error => {
@@ -100,7 +89,7 @@ function fetchDallE(payLoad,x,i) {
 
     var stories = [story1, story2, story3, story4];
     var randomGen = Math.floor(Math.random() * stories.length);
-    var storyCurrent= stories[randomGen]
+    var storyCurrent= stories[randomGen];
     var storyGen = storyCurrent.narration;
 
 setTimeout(function(){
@@ -129,7 +118,6 @@ setTimeout(function(){
         clearEl.attr('class', 'invisible');
         pageTwoEl.attr('class', 'invisible');
         loadingEl.attr('class', 'loading');
-
         comicLayoutEl.empty()
         for (i=0; i < storyGen.length; ++i) {
             var tempPayload = [];
@@ -178,8 +166,6 @@ setTimeout(function(){
 clearEl.on("click", () => {
     console.log(`Cleared the display`)
     pageOneEl.children().remove();
-  
-
   })
 
   saveBtnEl.on('click', function() {
