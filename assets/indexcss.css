@@ -9,13 +9,13 @@ body {
     text-align-last: center;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: black;
 }
 
 a {
     position: relative;
     border: #27282c;
-    background: #1e9bff;
+    background: white;
     color: black;
     text-align: center;
     text-decoration:none;
