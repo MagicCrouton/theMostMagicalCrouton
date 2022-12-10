@@ -1,4 +1,5 @@
 
+
 storyListEl = $('#storyList');
 
 if (localStorage.getItem('historyImg') === null) {
