@@ -72,8 +72,8 @@ function fetchDallE(payLoad,x,i) {
         pictureUrl= APIResponse.data[0].url;
         urls[i]=pictureUrl;
         x.append(`
-        <figure class="figure">
-            <img src="${APIResponse.data[0].url}" class="figure-img img-fluid rounded" alt="Image${i+1}">
+        <figure class="figure comicContainer">
+            <img src="${APIResponse.data[0].url}" class="figure-img img-fluid rounded " alt="Image${i+1}">
             <figcaption class="figure-caption">${captions[i]}</figcaption>
         </figure>`);
     })
@@ -84,12 +84,15 @@ function fetchDallE(payLoad,x,i) {
         // use APIResponse.data[0].url to grab image url.
 }
 // the fetch function retrieves an image and you need to use APIResponse.data[0].url to grab image url.
-// end API function
+// end API function sections
 
     var stories = [story1, story2, story3, story4];
     var randomGen = Math.floor(Math.random() * stories.length);
     var storyCurrent= stories[randomGen];
     var storyGen = storyCurrent.narration;
+
+// the body of the main script is wrapped in a setTimeout function to prevent user from spamming API
+// thus preventing failures.
 
 setTimeout(function(){
 
@@ -107,8 +110,6 @@ setTimeout(function(){
         </span>`)
     }    
 
-
-    
     var storySubmitBtnEl = $('#storySubmit')
     var loadingEl = $('#loading');
 
@@ -132,8 +133,8 @@ setTimeout(function(){
                 }
             currentTemp = currentTemp.join('');
             // console.log(currentTemp);
-            // payLoad[i] = `${stories[randomGen].style} ${currentTemp}`;
-             payLoad[i] = `${currentTemp}`;
+            payLoad[i] = `${storyCurrent.style} ${currentTemp}`;
+            //  payLoad[i] = `${currentTemp}`;
             }
 
             // fetchDallE(payLoad[1], comicLayoutEl, i)

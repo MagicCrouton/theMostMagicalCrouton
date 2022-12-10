@@ -1,10 +1,7 @@
-var artStyles = ['comicbook style','popArt','baroque','street Art','surrealism'];
-
+var artStyles ='comicbook style';
 var subStyle = ['cyberpunk', 'steampunk', 'synthwave', 'hand Drawn','photorealistic'];
 
-var randomGen = Math.floor(Math.random() * artStyles.length);
-var randomArt = Math.floor(Math.random() * artStyles.length);
-var art = artStyles[randomGen];
+var art = artStyles;
 var randomGen = Math.floor(Math.random() * subStyle.length);
 var randomStyle = Math.floor(Math.random() * subStyle.length);
 var style = subStyle[randomGen];

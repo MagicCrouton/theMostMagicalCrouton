@@ -21,7 +21,6 @@ body { font-family: 'Roboto Mono', monospace;
 
 #navBar {
     background-image: url('../Images/aliennavbar.png');
-    color: orange;
 }
 
 form {
@@ -77,3 +76,8 @@ footer {
     text-align: center;
 }
 
+.comicContainer {
+    border-style: solid;
+    border-color: black;
+    margin: 2%;
+}

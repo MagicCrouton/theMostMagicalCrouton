@@ -13,7 +13,7 @@ var capArr = JSON.parse(localStorage.getItem('historyCap'));
 for (i=0; i<imageArr.length; i) {
     console.log(i);
     storyListEl.append(`
-      <div class="container">
+      <div class="container comicContainer">
         <div class="row">
           <div id="target${i}" class="col col-6"></div>
           <div id="target${i+1}" class="col col-6"></div>
