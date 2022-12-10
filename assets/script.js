@@ -1,9 +1,8 @@
 var pageOneEl = $('#pageOne');
 var pageTwoEl = $('#pageTwo');
-var pageThreeEl = $('pageThree');
+var pageThreeEl = $('#pageThree');
 var comicLayoutEl = $('#comic-layout');
 var storySubmitBtnEl = $('#storySubmit');
-var comicTargetEl = $('#comicTarget');
 var target1EL = $('#target1');
 var target2EL = $('#target2');
 var target3EL = $('#target3');
@@ -98,12 +97,13 @@ setTimeout(function(){
     pageTwoEl.removeAttr('class');
     for (i=0; i < storyGen.length; ++i){
         var temp =storyGen[i].split("*");
+        console.log(temp);
         var tempEl = $(`#story${i+1}`);
         tempEl.text("");
         tempEl.html(`
         <span>
                  ${temp[0]}<input class="specificInput" type="text" id="payLoadA${i}">${temp[1]}
-                  <input class="specificInput" type="text" id="payLoadB${i}"
+                  <input class="specificInput" type="text" id="payLoadB${i}">${temp[2]}
         </span>`)
     }    
 
@@ -119,6 +119,7 @@ setTimeout(function(){
         pageTwoEl.attr('class', 'invisible');
         loadingEl.attr('class', 'loading');
         comicLayoutEl.empty()
+        pageThreeEl.removeAttr('class');
         for (i=0; i < storyGen.length; ++i) {
             var tempPayload = [];
             tempPayload[0] = $(`#payLoadA${i}`).val();
@@ -174,6 +175,7 @@ clearEl.on("click", (event) => {
   })
 
   saveBtnEl.on('click', function() {
+    pageThreeEl.attr('class', 'invisible');
     if (localStorage.getItem('historyImg')===null){
         var historyCapArr = [];
         var historyImgArr = [];
