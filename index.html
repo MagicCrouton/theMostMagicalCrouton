@@ -1,93 +1,49 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet1" type="text/css" href="./assets/other.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:ital,wght@1,300&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet1" type="text/css" href="./assets/other.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:ital,wght@1,300&display=swap"
+    rel="stylesheet">
 
 
-    <title>Magic Crouton Part 1</title>
+  <title>Magic Crouton Part 1</title>
 </head>
 
 <body>
-    
-        <div class="jumbotron jumbotron-fluid" 
-        style="background-image: url('./Images/comic-strip-1.jpg'); background-size:cover; height: 50vh ;
+
+  <div class="jumbotron jumbotron-fluid" style="background-image: url('./Images/comic-strip-1.jpg'); background-size:cover; height: 50vh ;
         background-position: center; background-repeat:space; background-color: black; margin: 0;">
-            <div class="container-fluid">
-            </div>
-        </div>
-        
-        <div class="jumbotron jumbotron-fluid" id="hideMe" style=" background-image: url('./Images/comic-strip-2.jpg') ; 
-        background-size: cover; min-height: 65vh;
-        background-position: center; background-repeat: space; background-color: black; margin: 0;">
-            <div id="container-fluid">
-
-
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light"
-  style=text-align:center;>
-    <a class="navbar-brand" href="#">Magical Crouton</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://labs.openai.com/">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./history.html">History</a>
-        </li>
-      </ul>
+    <div class="container-fluid">
     </div>
-  </nav>
+  </div>
 
-<div id="loading" class="">
-  <!-- loading icon will appear here -->
-</div>
-<div id="comicTarget"></div>
-<div id="pageTwo" class="invisible">
-    <section class="Location">
-        <form>
-            <div class="form-group">
-              <label id="story1" for="storyOne">What's for story one?</label>
-              <!-- <input id="storyFormOne" type="email" class="form-control" aria-describedby="emailHelp">
-              <input id="storyFormTwo" type="email" class="form-control" aria-describedby="emailHelp"> -->
 
-            </div>
-        </div>
 
-        <a href="./comicindex.html">
-        <button type="button" id="clickMe" onclick="removeImage()" class="btn btn-dark btn-lg btn-block"><h3>👉✨Welcome to Magical Crouton✨👈</h3></button>
-        </a>
-        
 
-        <div class="jumbotron jumbotron-fluid" id="hideMeTwo" style="background-image: url('./Images/comic-strip-3.jpg') ; 
+  <a href="./comicindex.html">
+    <button type="button" id="clickMe" onclick="removeImage()" class="btn btn-dark btn-lg btn-block">
+      <h2>👉✨Welcome to Magical Crouton✨👈</h2>
+    </button>
+  </a>
+
+
+  <div class="jumbotron jumbotron-fluid" id="hideMeTwo" style="background-image: url('./Images/comic-strip-3.jpg') ; 
         background-size: cover; min-height: 50vh;
         background-position: center ; background-repeat:space; background-color: black; margin: 0;">
-            <div id="container-fluid">
+    <div id="container-fluid">
 
-            </div>
-        </div>
+    </div>
+  </div>
 
-        <div class="jumbotron jumbotron-fluid" style="background-image: url('./Images/comic-strip-4.jpg') ; 
-        background-size:cover; min-height: 60vh;
-        background-position: center; background-repeat:no-repeat; background-color: black; margin: 0;">
-            <div class="container-fluid">
+  </div>
 
-            </div>
-    
 
 </body>
 
@@ -95,14 +51,11 @@
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-<script src="./assets/imagescript.js"></script>;
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./assets/imagescript.js"></script>
 
 </html>
