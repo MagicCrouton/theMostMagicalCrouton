@@ -9,32 +9,36 @@ body {
     text-align-last: center;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 a {
-    --clr:(#1e9bff);
     position: relative;
-    background: #fff;
-    color: #fff;
+    border: #27282c;
+    background: #1e9bff;
+    color: black;
     text-align: center;
-    text-decoration: none;
+    text-decoration:none;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 4em;
     letter-spacing: 0.1em;
     font-weight: 400;
+    padding: 0;
+    margin: 0;
     transition: 1s;
+    border-radius: 12px;
+     
 }
 
 a :hover {
-    background: var((#1e9bff));
-    color: var(#1e9bff);
+    background: #1e9bff;
     letter-spacing: 0.25em;
-    box-shadow: 0 0 30px var(#1e9bff);
+    box-shadow: 0 0 75px #1e9bff;
 }
 
 a :before {
 
-    content: '';
+  
     position: absolute;
     inset: 2px;
 
@@ -52,7 +56,6 @@ a i {
 }
 
 a i:before {
-    content: '';
     position: absolute;
     top: 0;
     left: 80%;
@@ -65,7 +68,7 @@ a i:before {
 
 a:hover i:before {
     width: 20px;
-    left: 20%;
+    left: 80%;
 }
 
 
@@ -78,7 +81,7 @@ a i:after {
     height: 4px;
     background: #27282c;
     transform: translateX(-50%) skewX(325deg);
-    transition: 1s;
+    transition: 2s;
 }
 
 a:hover i:after {
