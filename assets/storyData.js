@@ -11,10 +11,10 @@ var style = subStyle[randomGen];
 
 
 var story1 = {
-    narration: [`The most Magical Crouton has decided to fight a * with a *..`,
-    `He remembers his * and decides to *..`,
-    `Suddenly, a * bursts through the door with a *.!`,
-    `The most Magical Crouton thinks, "*, everyone watching is *.!`],
+    narration: [`The most Magical Crouton has decided to fight a * with a *.`,
+    `He remembers his * and decides to *.`,
+    `Suddenly, a * bursts through the door with a *!`,
+    `The most Magical Crouton thinks, "*, everyone watching is *!`],
      payLoadGuide:[
     ['a Magical Crouton fights a', '*', 'holding a', '*'],
     ['a Magical Crouton remebers his', '*', 'and decides to', '*'],
@@ -53,7 +53,7 @@ var story2 = {
     ['a squirell','*','and','*']]
 };
 var story3 = {
-    narration: [`While driving out of a tunnel, a * is suddenly dropped on the planet of *.`,
+    narration: [`While driving out of a tunnel, a * is suddenly dropped on the planet of *.`],
     narration: [`While driving out of a tunnel a * is suddenly dropped on the planet of *.`,
     `He/she encouters a * and that can also *.`,
     `On this planet of * there are also  *.`,
