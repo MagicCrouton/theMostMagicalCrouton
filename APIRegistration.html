@@ -14,8 +14,8 @@
     rel="stylesheet">
 </head>
 <body>
-    <div class="form-group">
-        <div class="card" style="width: 50%;">
+    <div id="apiRegInfo" class="form-group">
+        <div class="card" style="width: 80%;">
             <img class="card-img" src="./Images/NeedAPI.png" alt="APIRegistrationPicture">
             <div class="card-body">
                 <h1> Oops you need an API key to use this site.. Big Sad..</h1>
@@ -31,7 +31,7 @@
                     <li class="list-group-item">Click on Create new Secret Key
                         <img class="card-img" src="./Images/CreateNewKey.png" alt="APIRegistrationPicture">
                     </li>
-                    <li class="list-group-item">Enter that key below!
+                    <li id="keyInputMessage" class="list-group-item">Enter that key below!
                         <input type="key" class="form-control" id="APIentry" placeholder="API Key here">
                         <button type="button" id="APISubmitBtn" class="btn btn-dark btn-lg btn-block">
                             <h5>Click to submit</h5>
