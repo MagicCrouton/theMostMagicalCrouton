@@ -157,3 +157,22 @@ footer {
     margin-left: 15%;
 }
 
+
+@media (max-width: 480px) {
+    body {
+        font-size: 4px;
+    }
+}
+
+
+@media (max-width: 720px) {
+    body {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 980px) {
+    body {
+        font-size: 12px;
+    }
+}
