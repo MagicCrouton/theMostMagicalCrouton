@@ -183,8 +183,6 @@ clearEl.on("click", (event) => {
             historyImgArr[n]=tempImg;
             historyCapArr[n]=tempCap;
         }
-
-    
         localStorage.setItem('historyImg', `${JSON.stringify(historyImgArr)}`);
         localStorage.setItem('historyCap', `${JSON.stringify(historyCapArr)}`);
     }
