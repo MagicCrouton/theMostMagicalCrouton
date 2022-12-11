@@ -80,3 +80,8 @@ footer {
     border-color: black;
     margin: 2%;
 }
+
+#apiRegInfo {
+    display: flex;
+    margin-left: 15%;
+}

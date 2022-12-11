@@ -180,13 +180,9 @@ clearEl.on("click", (event) => {
         for (n=0; n < 4; ++n) {
             var tempImg = urls[n];
             var tempCap = captions[n];
-            console.log(tempCap);
-            console.log(tempImg);
             historyImgArr[n]=tempImg;
             historyCapArr[n]=tempCap;
         }
-
-    
         localStorage.setItem('historyImg', `${JSON.stringify(historyImgArr)}`);
         localStorage.setItem('historyCap', `${JSON.stringify(historyCapArr)}`);
     }
@@ -207,3 +203,11 @@ clearEl.on("click", (event) => {
     localStorage.setItem('historyCap', `${JSON.stringify(historyCapArr)}`);
   }) 
   
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
