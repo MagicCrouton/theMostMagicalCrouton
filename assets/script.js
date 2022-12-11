@@ -180,8 +180,6 @@ clearEl.on("click", (event) => {
         for (n=0; n < 4; ++n) {
             var tempImg = urls[n];
             var tempCap = captions[n];
-            console.log(tempCap);
-            console.log(tempImg);
             historyImgArr[n]=tempImg;
             historyCapArr[n]=tempCap;
         }
