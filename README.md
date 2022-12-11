@@ -25,3 +25,18 @@ Chat GPT
 ## License
 
 Please refer to the LICENSE in the repo.
+
+## Screenshots
+
+Home Page
+![img](Images/mchp.png)
+
+Story Page
+![img](Images/mcsp.png) 
+
+Comic Page
+![img](Images/comicp.png)
+
+History Page
+![img](Images/history.png)
+
