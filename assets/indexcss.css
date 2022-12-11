@@ -9,7 +9,7 @@ body {
     text-align-last: center;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: white;
 }
 
 a {
@@ -20,20 +20,20 @@ a {
     text-align: center;
     text-decoration:none;
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 2em;
     letter-spacing: 0.1em;
     font-weight: 400;
     padding: 0;
     margin: 0;
     transition: 1s;
-    border-radius: 12px;
      
 }
 
 a :hover {
-    background: #1e9bff;
+    background: #333;
     letter-spacing: 0.25em;
     box-shadow: 0 0 75px #1e9bff;
+    border-radius: 12px;
 }
 
 a :before {
@@ -91,4 +91,23 @@ a i:after {
 a:hover i:after {
     width: 20px;
     left: 80%;
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 4px;
+    }
+}
+
+
+@media (max-width: 720px) {
+    body {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 980px) {
+    body {
+        font-size: 12px;
+    }
 }
