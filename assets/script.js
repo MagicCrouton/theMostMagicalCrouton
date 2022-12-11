@@ -121,6 +121,7 @@ setTimeout(function(){
         loadingEl.attr('class', 'loading');
         comicLayoutEl.empty()
         pageThreeEl.removeAttr('class');
+        pageTwoEl.remove();
         for (i=0; i < storyGen.length; ++i) {
             var tempPayload = [];
             tempPayload[0] = $(`#payLoadA${i}`).val();
@@ -202,12 +203,3 @@ clearEl.on("click", (event) => {
     localStorage.setItem('historyImg', `${JSON.stringify(historyImgArr)}`);
     localStorage.setItem('historyCap', `${JSON.stringify(historyCapArr)}`);
   }) 
-  
-// Footer
-// © 2022 GitHub, Inc.
-// Footer navigation
-// Terms
-// Privacy
-// Security
-// Status
-// Docs
