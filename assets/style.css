@@ -6,7 +6,8 @@ body { font-family: 'Roboto Mono', monospace;
     color: #333;
     line-height: 1.6;
 
-}
+} 
+
 
 .Location {
     font-family: 'Roboto Mono', monospace;
@@ -26,6 +27,8 @@ body { font-family: 'Roboto Mono', monospace;
 form {
     text-align: center;
     font-size: x-large;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 input[type=text] {
     border: none;
@@ -67,10 +70,6 @@ footer {
         transform: rotate(1turn);
     }
 }
-
-/* h3 {
-    text-align: center;
-} */
 
 .story-list {
     text-align: center;
