@@ -2,7 +2,7 @@
 
 ## Description
 
-This app leverages open Ai's DALLE API and Chat GPT model 3 to generate images and relative caption based on user input. user input is taken in the form of a madlib where the user inputs are placed into a premade template 'payloadGuide' to feed both the DALLE and Chat GPT APIs which then the return values are placed on screen as a comic book based.  
+This app leverages open Ai's DALLE API and Chat GPT model 3 to generate images and relative caption based on user input. user input is taken in the form of a madlib where the user inputs are placed into a premade template 'payloadGuide' to feed both the DALLE and Chat GPT APIs which then the return values are placed on screen as a comic book.
 
 ## Contributors
 
