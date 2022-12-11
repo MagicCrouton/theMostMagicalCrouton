@@ -1,3 +1,8 @@
+:root {
+        --typewriterSpeed: 3s;
+        --typewriterCharacters: 24;
+}
+
 body { font-family: 'Roboto Mono', monospace;
     font-size: 15px;
     background-color: white;
@@ -5,8 +10,74 @@ body { font-family: 'Roboto Mono', monospace;
     padding: 0;
     color: #333;
     line-height: 1.6;
-
+   text-align: center;
+   place-content: center;
+  
 } 
+
+#madLibs {
+    position: relative;
+    
+    width: max-content;
+    
+}
+
+#madLibs::before,
+#madLibs::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#madLibs::before {
+    background: white;
+    animation: typewriter var(--typewriterSpeed) 
+    steps(var(--typewriterCharacters)) 
+    forwards;
+}
+
+#madLibs::after {
+    width: 0.125em;
+    background: #000000;
+    animation: typewriter var(--typewriterSpeed) 
+    steps(var(--typewriterCharacters)) forwards,
+    blink 500ms var(--typewriterSpeed) 
+    steps(24) 
+    infinite ; 
+}
+
+
+.lead {
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 500ms ease calc(var(--typewriterSpeed) + 0.5s)
+    forwards;
+}
+
+
+
+@keyframes typewriter {
+    to {
+        left:100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 .Location {
@@ -85,3 +156,26 @@ footer {
     display: flex;
     margin-left: 15%;
 }
+<<<<<<< HEAD
+=======
+
+
+@media (max-width: 480px) {
+    body {
+        font-size: 4px;
+    }
+}
+
+
+@media (max-width: 720px) {
+    body {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 980px) {
+    body {
+        font-size: 12px;
+    }
+}
+>>>>>>> 57559f0d9bd86a6bbfecb53a7ef4a7c0beda3f49
