@@ -1,5 +1,5 @@
 var artStyles ='comicbook style';
-var subStyle = ['cyberpunk', 'steampunk', 'synthwave', 'hand Drawn','photorealistic'];
+var subStyle = ['cyberpunk', 'steampunk', 'synthwave'];
 
 var art = artStyles;
 var randomGen = Math.floor(Math.random() * subStyle.length);
