@@ -34,16 +34,16 @@ Please refer to the LICENSE in the repo.
 ## Screenshots
 
 Home Page
-![img](Images/homepage.png)
+![img](./Images/homepage.png)
 
 Story Page
-![img](Images/story%20page.png)
+![img](./Images/story%20page.png)
 
 Comic Page
-![img](Images/comic%20page.png)
+![img](./Images/comic%20page.png)
 
 History Page
-![img](Images/historypage.png)
+![img](./Images/historypage.png)
 
-
-
+User API Setup Page
+![img](./Images/APIRegistration.png)
