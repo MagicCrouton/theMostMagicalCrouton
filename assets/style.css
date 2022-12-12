@@ -170,6 +170,9 @@ footer {
     body {
         font-size: 4px;
     }
+    .form-group {
+        font-size: 8px;
+    }
 }
 
 
@@ -177,10 +180,17 @@ footer {
     body {
         font-size: 8px;
     }
+    .form-group {
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 980px) {
     body {
         font-size: 12px;
+    }
+
+    .form-group {
+        font-size: 14px;
     }
 }
