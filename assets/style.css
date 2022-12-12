@@ -7,7 +7,7 @@ body { font-family: 'Roboto Mono', monospace;
     font-size: 15px;
     background-color: white;
     margin: 0;
-    padding: 50px;
+    padding: 20px;
     color: #333;
     line-height: 1.6;
    text-align: center;
@@ -15,10 +15,6 @@ body { font-family: 'Roboto Mono', monospace;
    min-height: 100vh;
   
 } 
-
-/* #pageOne{
-    min-height: calc(100vh - 211px - 50px);
-} */
 
 #madLibs {
     position: relative;
@@ -98,6 +94,8 @@ body { font-family: 'Roboto Mono', monospace;
 
 #navBar {
     background-image: url('../Images/aliennavbar.png');
+    padding: 0;
+    margin: 0;
 }
 
 form {
