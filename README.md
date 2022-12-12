@@ -10,7 +10,9 @@ Eugene P, Mark G, Tim A, Konny H, David O
 
 ## Usage
 
-To use this site..
+Users will be guided to create an AI generated 4 pane comic. This will be achieved by using a mad lib styles.
+
+To use this site you will need to have an open AI api key. the site will automatically prompt the user if no key is detected. API keys are stored in local memory on user side browser. 
 
 ## Site Links
 Live Site URL: https://magiccrouton.github.io/theMostMagicalCrouton/
