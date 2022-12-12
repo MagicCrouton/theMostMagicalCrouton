@@ -34,14 +34,16 @@ Please refer to the LICENSE in the repo.
 ## Screenshots
 
 Home Page
-![img](Images/mchp.png)
+![img](Images/homepage.png)
 
 Story Page
-![img](Images/mcsp.png) 
+![img](Images/story%20page.png)
 
 Comic Page
-![img](Images/comicp.png)
+![img](Images/comic%20page.png)
 
 History Page
-![img](Images/history.png)
+![img](Images/historypage.png)
+
+
 
