@@ -120,7 +120,7 @@ setTimeout(function(){
         pageTwoEl.attr('class', 'invisible');
         loadingEl.attr('class', 'loading');
         comicLayoutEl.empty()
-        pageThreeEl.removeAttr('class');
+        // pageThreeEl.removeAttr('class');
         pageTwoEl.remove();
         for (i=0; i < storyGen.length; ++i) {
             var tempPayload = [];
@@ -156,6 +156,7 @@ setTimeout(function(){
             
             setTimeout(function(){
                 loadingEl.removeAttr('class');
+                pageThreeEl.removeAttr('class');
             },5000)
 
 })
