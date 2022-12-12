@@ -7,13 +7,18 @@ body { font-family: 'Roboto Mono', monospace;
     font-size: 15px;
     background-color: white;
     margin: 0;
-    padding: 0;
+    padding: 50px;
     color: #333;
     line-height: 1.6;
    text-align: center;
    place-content: center;
+   min-height: 100vh;
   
 } 
+
+/* #pageOne{
+    min-height: calc(100vh - 211px - 50px);
+} */
 
 #madLibs {
     position: relative;
@@ -109,10 +114,13 @@ input[type=text] {
 footer {
         font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
         padding: 20px;
-        margin-top: 80px;
-        color: white;
-        background-color: #333;
+        color: black;
+        background-image: url('/Images/aliennavbar.png');
         text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        
 }
 
 .specificInput {
